@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="estilos.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700|Poppins:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 </head>
 <body>
@@ -63,6 +64,32 @@
             </div>
         </div>
     </section>
+
+    <section id="section-video">
+        <div class="contenedor">
+            <video id="video" width="900px" height="600px" src="imagenes/video.mp4"></video>
+            <div class="botones">
+                <button id="boton" onclick="playvideo()"><i class="far fa-play-circle"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+
+    var video = document.getElementById('video');
+    var boton = document.getElementById('boton');
+
+    function playvideo() {
+        video.play();
+        boton.style.display = "none";
+    }
+
+    video.addEventListener('ended', function(){
+        boton.style.display = "block";
+    })
+
+
+    </script>
     
 </body>
 </html>
